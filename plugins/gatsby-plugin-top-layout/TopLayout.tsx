@@ -29,7 +29,7 @@ export default function TopLayout({ children }: Props) {
         {/* Basic page info */}
         <title>Home - Mona Tajarbi</title>
         <meta name="description" content="Home of Mona Tajarbi" />
-        <link rel="shortcut icon" href="/assets/favicon.ico" />
+        <link rel="shortcut icon" href="/static/favicon.ico" />
 
         {/* Open graph meta tags */}
         <meta property="og:title" content="Home - Mona Tajarbi" />
@@ -37,7 +37,7 @@ export default function TopLayout({ children }: Props) {
         <meta property="og:type" content="website" />
         <meta
           property="og:image"
-          content="https://thefront.maccarianagency.com/assets/social.png"
+          content="https://www.monatajarbi.com/static/social.png"
         />
         <meta property="og:description" content="Home of Mona Tajarbi" />
         <meta property="og:url" content="https://www.monatajarbi.com/" />
