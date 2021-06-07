@@ -1,7 +1,7 @@
 {
-  "name": "thefront-ts--gatsby",
-  "author": "maccarian agency",
-  "email": "hi@maccarianagency.com",
+  "name": "monatajarbi.com",
+  "author": "Pierre du Toit",
+  "email": "subaquatic.pierre@gmail.com",
   "version": "3.2.2",
   "private": true,
   "scripts": {
@@ -33,7 +33,7 @@
     "@material-ui/styles": "^4.2.1",
     "aos": "^2.3.4",
     "clsx": "^1.0.4",
-    "gatsby": "^2.31.0",
+    "gatsby": "^3.6.2",
     "gatsby-plugin-material-ui": "^2.1.10",
     "gatsby-plugin-page-creator": "^2.5.0",
     "gatsby-plugin-react-helmet": "^3.5.0",
@@ -42,6 +42,7 @@
     "jarallax": "^1.12.1",
     "leaflet": "^1.6.0",
     "npm": "^7.4.2",
+    "postcss": "^8.3.0",
     "prop-types": "^15.7.2",
     "query-string": "^6.13.7",
     "react": "^16.13.1",

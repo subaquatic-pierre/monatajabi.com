@@ -3,6 +3,11 @@ module.exports = {
     title: 'Home - Mona Tajarbi',
   },
   plugins: [
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-resolve-src',
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     'gatsby-plugin-top-layout',
     {
       resolve: 'gatsby-plugin-material-ui',
@@ -15,10 +20,6 @@ module.exports = {
         disableMinification: true,
       },
     },
-    // If you want to use styled components you should add the plugin here.
-    // 'gatsby-plugin-styled-components',
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-resolve-src',
     {
       resolve: 'gatsby-plugin-page-creator',
       options: {
