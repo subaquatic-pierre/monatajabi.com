@@ -3,6 +3,8 @@ import { Helmet } from 'react-helmet';
 import 'react-lazy-load-image-component/src/effects/opacity.css';
 import 'leaflet/dist/leaflet.css';
 import 'assets/css/index.css';
+import socialImage from 'assets/social.jpg';
+import favicon from 'assets/favicon.ico';
 
 import 'swiper/css/swiper.min.css';
 import 'aos/dist/aos.css';
@@ -29,16 +31,13 @@ export default function TopLayout({ children }: Props) {
         {/* Basic page info */}
         <title>Home - Mona Tajarbi</title>
         <meta name="description" content="Home of Mona Tajarbi" />
-        <link rel="shortcut icon" href="/static/favicon.ico" />
+        <link rel="shortcut icon" href={favicon} />
 
         {/* Open graph meta tags */}
         <meta property="og:title" content="Home - Mona Tajarbi" />
         <meta property="og:locale" content="en_AE" />
         <meta property="og:type" content="website" />
-        <meta
-          property="og:image"
-          content="https://www.monatajarbi.com/static/social.png"
-        />
+        <meta property="og:image" content={socialImage} />
         <meta property="og:description" content="Home of Mona Tajarbi" />
         <meta property="og:url" content="https://www.monatajarbi.com/" />
 
