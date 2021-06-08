@@ -1,13 +1,13 @@
-import React from 'react';
-import { Helmet } from 'react-helmet';
-import 'react-lazy-load-image-component/src/effects/opacity.css';
-import 'leaflet/dist/leaflet.css';
-import 'assets/css/index.css';
-import socialImage from 'assets/social.jpg';
-import favicon from 'assets/favicon.ico';
+import React from "react";
+import { Helmet } from "react-helmet";
+import "react-lazy-load-image-component/src/effects/opacity.css";
+import "leaflet/dist/leaflet.css";
+import "assets/css/index.css";
+import socialImage from "assets/social.jpg";
+import favicon from "assets/favicon.ico";
 
-import 'swiper/css/swiper.min.css';
-import 'aos/dist/aos.css';
+import "swiper/css/swiper.min.css";
+import "aos/dist/aos.css";
 
 interface Props {
   children?: React.ReactNode;
@@ -42,10 +42,15 @@ export default function TopLayout({ children }: Props) {
         <meta property="og:url" content="https://www.monatajarbi.com/" />
 
         {/* Fonts */}
+        {/* <link rel="preconnect" href="https://fonts.gstatic.com"> */}
         <link
-          href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@600,300&display=swap"
           rel="stylesheet"
-        />
+        ></link>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Arimo&family=Montserrat:wght@200;400&display=swap"
+          rel="stylesheet"
+        ></link>
         <script
           src="https://kit.fontawesome.com/4c273e6d43.js"
           crossOrigin="anonymous"
