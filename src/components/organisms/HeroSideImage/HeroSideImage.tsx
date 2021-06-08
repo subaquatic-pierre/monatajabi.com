@@ -19,8 +19,8 @@ const useStyles = makeStyles(theme => ({
     objectPosition: "0% 0%",
   },
   cover: {
-    background: theme.palette.secondary.dark,
-    opacity: 0.6,
+    background: theme.palette.grey[900],
+    opacity: 0.5,
     position: "absolute",
     top: 0,
     left: 0,
@@ -67,7 +67,7 @@ const HeroSideImage = ({
 
   const useCustomStyles = makeStyles(() => ({
     coverBg: {
-      background: backgroundColor,
+      background: "black",
     },
   }));
 

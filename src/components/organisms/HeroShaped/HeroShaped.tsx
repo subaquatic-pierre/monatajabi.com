@@ -40,6 +40,7 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.down("sm")]: {
       maxWidth: "100%",
       flex: "0 0 100%",
+      alignItems: "center",
       height: "300px",
     },
   },
@@ -52,9 +53,13 @@ const useStyles = makeStyles(theme => ({
     },
   },
   heroImageContainer: {
+    display: "flex",
     height: "100%",
     width: "100%",
     overflow: "hidden",
+    [theme.breakpoints.down("sm")]: {
+      minHeight: "300px",
+    },
   },
   heroImage: {
     position: "absolute",

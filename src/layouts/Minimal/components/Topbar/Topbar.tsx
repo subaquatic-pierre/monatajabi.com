@@ -66,7 +66,7 @@ const Topbar = ({ themeMode, className, ...rest }: Props): JSX.Element => {
       </div>
       <div className={classes.logoText}>
         <Link href="/">
-          <Typography variant="h4" color="secondary">
+          <Typography variant="h4" color="primary">
             Mona Tajarbi
           </Typography>
         </Link>

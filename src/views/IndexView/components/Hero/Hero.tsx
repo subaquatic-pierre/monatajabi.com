@@ -40,15 +40,15 @@ const useStyles = makeStyles(theme => ({
       },
     },
   },
-  imageAnimation: {
+  image: {
     background: `url(${image})`,
     backgroundRepeat: "no-repeat",
-    backgroundSize: "400px auto",
-    width: "600%",
-    height: "600%",
+    backgroundSize: "450px auto",
+    backgroundPosition: "40% 10%",
+    height: "100%",
     backgroundColor: "white",
-    position: "absolute",
     [theme.breakpoints.up("sm")]: {
+      minHeight: "500px",
       backgroundSize: "800px auto",
     },
   },
@@ -73,7 +73,7 @@ const Hero = ({
       <TypedText
         component="span"
         variant="h2"
-        color="secondary"
+        color="primary"
         className={classes.fontWeight900}
         typedProps={{
           strings: ["Mona Tajarbi"],
@@ -117,7 +117,7 @@ const Hero = ({
       <HeroShaped
         className={classes.heroShaped}
         leftSide={leftSideContent}
-        rightSide={<div className={clsx(classes.imageAnimation)} />}
+        rightSide={<div className={clsx(classes.image)} />}
       />
     </div>
   );

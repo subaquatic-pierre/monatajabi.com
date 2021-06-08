@@ -3,12 +3,11 @@ import { makeStyles, Grid, Typography, Box } from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
   copy: {
-    color: "white",
     fontWeight: "bold",
     letterSpacing: "1px",
   },
   footerContainer: {
-    backgroundColor: theme.palette.secondary.main,
+    backgroundColor: theme.palette.primary.light,
     display: "flex",
     justifyContent: "center",
     minHeight: "100px",

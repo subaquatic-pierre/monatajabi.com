@@ -18,15 +18,47 @@ interface DescriptionListIconProps {
   /**
    * The alignment of the items
    */
-  align?: 'left' | 'right' | 'center';
+  align?: "left" | "right" | "center";
   /**
    * Title variant
    */
-  titleVariant?: 'inherit' | 'button' | 'overline' | 'caption' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'subtitle1' | 'subtitle2' | 'body1' | 'body2' | 'srOnly' | undefined;
+  titleVariant?:
+    | "inherit"
+    | "button"
+    | "overline"
+    | "caption"
+    | "h1"
+    | "h2"
+    | "h3"
+    | "h4"
+    | "h5"
+    | "h6"
+    | "subtitle1"
+    | "subtitle2"
+    | "body1"
+    | "body2"
+    | "srOnly"
+    | undefined;
   /**
    * Subtitle variant
    */
-  subtitleVariant?: 'inherit' | 'button' | 'overline' | 'caption' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'subtitle1' | 'subtitle2' | 'body1' | 'body2' | 'srOnly' | undefined;
+  subtitleVariant?:
+    | "inherit"
+    | "button"
+    | "overline"
+    | "caption"
+    | "h1"
+    | "h2"
+    | "h3"
+    | "h4"
+    | "h5"
+    | "h6"
+    | "subtitle1"
+    | "subtitle2"
+    | "body1"
+    | "body2"
+    | "srOnly"
+    | undefined;
   /**
    * Additional props to pass to the title Typography component
    */
@@ -36,5 +68,7 @@ interface DescriptionListIconProps {
    */
   subtitleProps?: object;
   // All other props
-  [x:string]: any;
+  [x: string]: any;
+
+  image?: string;
 }

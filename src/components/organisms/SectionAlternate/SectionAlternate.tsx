@@ -1,20 +1,20 @@
-import React from 'react';
-import clsx from 'clsx';
-import { makeStyles } from '@material-ui/core/styles';
+import React from "react";
+import clsx from "clsx";
+import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles(theme => ({
   root: {
-    background: theme.palette.alternate.main,
+    background: theme.palette.primary.light,
   },
   inner: {
     maxWidth: theme.layout.contentWidth,
-    width: '100%',
-    margin: '0 auto',
+    width: "100%",
+    margin: "0 auto",
     padding: theme.spacing(6, 2),
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.up("sm")]: {
       padding: theme.spacing(8, 8),
     },
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.up("md")]: {
       padding: theme.spacing(12, 8),
     },
   },
@@ -28,17 +28,22 @@ const useStyles = makeStyles(theme => ({
  *
  * @param {Object} props
  */
-const SectionAlternate = ({ children, innerNarrowed, className, ...rest }: SectionAlternateProps): JSX.Element => {
+const SectionAlternate = ({
+  children,
+  innerNarrowed,
+  className,
+  ...rest
+}: SectionAlternateProps): JSX.Element => {
   const classes = useStyles();
 
   return (
     <section
-      className={clsx('section-alternate', classes.root, className)}
+      className={clsx("section-alternate", classes.root, className)}
       {...rest}
     >
       <div
         className={clsx(
-          'section-alternate__content',
+          "section-alternate__content",
           classes.inner,
           innerNarrowed ? classes.innerNarrowed : {},
         )}

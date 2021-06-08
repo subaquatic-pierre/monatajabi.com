@@ -32,7 +32,7 @@ const Promotion = ({ className, ...rest }: ViewComponentProps): JSX.Element => {
                 variant="h4"
                 style={{ color: isMd ? "inherit" : "white" }}
               >
-                Something important about this event
+                Checking out the latest clothing styles
               </Typography>
             </Grid>
             <Grid item xs={12}>
@@ -40,8 +40,8 @@ const Promotion = ({ className, ...rest }: ViewComponentProps): JSX.Element => {
                 variant="h6"
                 style={{ color: isMd ? "inherit" : "white" }}
               >
-                This is where we can add a few more words about what is
-                happening and how to get involved.
+                We will check out the latest clothing styles and branding for
+                top fashion tips and tricks.
               </Typography>
             </Grid>
           </Grid>
@@ -55,7 +55,7 @@ const Promotion = ({ className, ...rest }: ViewComponentProps): JSX.Element => {
                 variant="h4"
                 style={{ color: isMd ? "inherit" : "white" }}
               >
-                Something important about this event
+                Events and schedules for al the latest make styles.
               </Typography>
             </Grid>
             <Grid item xs={12}>
@@ -63,8 +63,8 @@ const Promotion = ({ className, ...rest }: ViewComponentProps): JSX.Element => {
                 variant="h6"
                 style={{ color: isMd ? "inherit" : "white" }}
               >
-                This is where we can add a few more words about what is
-                happening and how to get involved.
+                Continually improving on our latest brands and styles, we hope
+                to bring the best experience to you.
               </Typography>
             </Grid>
           </Grid>
@@ -78,7 +78,7 @@ const Promotion = ({ className, ...rest }: ViewComponentProps): JSX.Element => {
                 variant="h4"
                 style={{ color: isMd ? "inherit" : "white" }}
               >
-                Something important about this event
+                Close to you are all the time.
               </Typography>
             </Grid>
             <Grid item xs={12}>
@@ -86,8 +86,8 @@ const Promotion = ({ className, ...rest }: ViewComponentProps): JSX.Element => {
                 variant="h6"
                 style={{ color: isMd ? "inherit" : "white" }}
               >
-                This is where we can add a few more words about what is
-                happening and how to get involved.
+                It is always nice to see the latest trends and events, this
+                means we will keep you updated to all the latest happenings.
               </Typography>
             </Grid>
           </Grid>
