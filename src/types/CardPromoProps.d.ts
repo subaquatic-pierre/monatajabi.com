@@ -6,7 +6,7 @@ interface CardPromoProps {
   /**
    * Promo title to show inside the card
    */
-  title: string;
+  title?: string;
   /**
    * Promo subtitle to show inside the card
    */
@@ -26,11 +26,19 @@ interface CardPromoProps {
   /**
    * The content alignment
    */
-  align?: 'left' | 'right' | 'center';
+  align?: "left" | "right" | "center";
   /**
    * Title color
    */
-  titleColor?: 'inherit' | 'initial' | 'textPrimary' | 'primary' | 'secondary' | 'textSecondary' | 'error' | undefined;
+  titleColor?:
+    | "inherit"
+    | "initial"
+    | "textPrimary"
+    | "primary"
+    | "secondary"
+    | "textSecondary"
+    | "error"
+    | undefined;
   /**
    * Additional props to pass to the IconAlternate component
    */
@@ -48,5 +56,7 @@ interface CardPromoProps {
    */
   descriptionProps?: object;
   // All other props
-  [x:string]: any;
+  [x: string]: any;
+
+  link?: string;
 }

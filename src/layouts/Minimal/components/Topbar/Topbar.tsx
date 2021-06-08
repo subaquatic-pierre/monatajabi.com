@@ -47,6 +47,11 @@ interface Props {
 const Topbar = ({ themeMode, className, ...rest }: Props): JSX.Element => {
   const classes = useStyles();
 
+  const handleConnectClick = () => {
+    const el = document.getElementById("connectSection");
+    window.scrollTo(el.offsetLeft, el.offsetTop);
+  };
+
   return (
     <Toolbar className={clsx(classes.toolbar, className)} {...rest}>
       <div className={classes.logoContainer}>
@@ -67,7 +72,7 @@ const Topbar = ({ themeMode, className, ...rest }: Props): JSX.Element => {
         </Link>
       </div>
       <Button
-        href="#connect"
+        onClick={handleConnectClick}
         variant="contained"
         className={classes.connectButton}
         color="primary"

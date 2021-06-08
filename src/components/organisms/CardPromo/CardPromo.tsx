@@ -1,17 +1,22 @@
-import React from 'react';
-import clsx from 'clsx';
-import { makeStyles } from '@material-ui/core/styles';
-import { Grid, Typography } from '@material-ui/core';
-import { IconAlternate } from 'components/molecules';
-import { CardBase } from 'components/organisms';
+import React from "react";
+import clsx from "clsx";
+import { makeStyles } from "@material-ui/core/styles";
+import { Grid, Typography } from "@material-ui/core";
+import { IconAlternate } from "components/molecules";
+import { CardBase } from "components/organisms";
 
 const useStyles = makeStyles(theme => ({
   root: {
-    height: '100%',
-    width: '100%',
+    height: "100%",
+    width: "100%",
   },
   fontWeight700: {
     fontWeight: 700,
+  },
+  cursorPointer: {
+    "& :hover": {
+      cursor: "pointer",
+    },
   },
 }));
 
@@ -27,27 +32,46 @@ const CardPromo = ({
   title,
   subtitle,
   description,
-  align = 'left',
+  align = "left",
   className,
   iconAlternateProps = {},
   titleProps = {},
   subtitleProps = {},
   descriptionProps = {},
+  link,
   ...rest
 }: CardPromoProps): JSX.Element => {
-
   const classes = useStyles();
 
-  let justifyGrid: ('center' | 'flex-start' | 'flex-end' | 'space-between' | 'space-around' | 'space-evenly' | undefined) = 'flex-start';
-  if (align === 'center') {
-    justifyGrid = 'center';
-  } else if (align === 'right') {
-    justifyGrid = 'flex-end';
+  const handleCardClick = () => {
+    if (link) {
+      window.open(link, "_blank");
+    }
+  };
+
+  let justifyGrid:
+    | "center"
+    | "flex-start"
+    | "flex-end"
+    | "space-between"
+    | "space-around"
+    | "space-evenly"
+    | undefined = "flex-start";
+  if (align === "center") {
+    justifyGrid = "center";
+  } else if (align === "right") {
+    justifyGrid = "flex-end";
   }
   return (
     <CardBase
-      className={clsx('card__promo', classes.root, className)}
+      className={clsx(
+        "card__promo",
+        classes.root,
+        className,
+        link && classes.cursorPointer,
+      )}
       {...rest}
+      onClick={handleCardClick}
     >
       <Grid container spacing={2} className="card-promo__wrapper">
         <Grid
@@ -60,7 +84,7 @@ const CardPromo = ({
           <IconAlternate
             fontIconClass={fontIconClass}
             color={color}
-            size="medium"
+            size="large"
             className="card-promo__icon"
             {...iconAlternateProps}
           />
@@ -69,8 +93,8 @@ const CardPromo = ({
           <Typography
             variant="h4"
             align={align}
-            className={clsx('card-promo__title', classes.fontWeight700)}
-            color={titleColor || 'textPrimary'}
+            className={clsx("card-promo__title", classes.fontWeight700)}
+            color={titleColor || "textPrimary"}
             {...titleProps}
           >
             {title}
@@ -81,7 +105,7 @@ const CardPromo = ({
             <Typography
               variant="h6"
               align={align}
-              className={clsx('card-promo__subtitle', classes.fontWeight700)}
+              className={clsx("card-promo__subtitle", classes.fontWeight700)}
               {...subtitleProps}
             >
               {subtitle}

@@ -1,11 +1,18 @@
-import React from 'react';
-import { makeStyles, Divider } from '@material-ui/core';
-import { Section, SectionAlternate } from 'components/organisms';
-import { GetStarted, Features, Reviews, QuickStart, Services, Hero } from './components';
+import React from "react";
+import { makeStyles, Divider } from "@material-ui/core";
+import { Section, SectionAlternate, Footer } from "components/organisms";
+import {
+  ConnectWithMe,
+  Features,
+  Reviews,
+  QuickStart,
+  Services,
+  Hero,
+} from "./components";
 
 const useStyles = makeStyles(() => ({
   sectionAlternateNoPaddingTop: {
-    '& .section-alternate__content': {
+    "& .section-alternate__content": {
       paddingBottom: 0,
     },
   },
@@ -34,9 +41,10 @@ const IndexView = ({ themeMode }) => {
       <Section className={classes.dividerSection}>
         <Divider />
       </Section>
-      <Section narrow>
-        <GetStarted />
+      <Section id="connectSection">
+        <ConnectWithMe />
       </Section>
+      <Footer />
     </div>
   );
 };
