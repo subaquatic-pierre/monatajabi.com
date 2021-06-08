@@ -4,7 +4,6 @@ import { Section, SectionAlternate, Footer } from "components/organisms";
 import {
   ConnectWithMe,
   Features,
-  Reviews,
   QuickStart,
   Services,
   Hero,
@@ -35,9 +34,7 @@ const IndexView = ({ themeMode }) => {
       <SectionAlternate>
         <Features />
       </SectionAlternate>
-      <Section>
-        <Reviews />
-      </Section>
+
       <Section className={classes.dividerSection}>
         <Divider />
       </Section>
