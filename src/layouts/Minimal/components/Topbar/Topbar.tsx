@@ -1,30 +1,41 @@
-import React from 'react';
-import clsx from 'clsx';
-import { makeStyles } from '@material-ui/core/styles';
-import { Toolbar } from '@material-ui/core';
-import { Image } from 'components/atoms';
+import React from "react";
+import clsx from "clsx";
+import { makeStyles } from "@material-ui/core/styles";
+import { Link, Toolbar, Typography, Button } from "@material-ui/core";
+import logoSmall from "assets/images/logo-small.png";
+import { Image } from "components/atoms";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   toolbar: {
     maxWidth: theme.layout.contentWidth,
-    width: '100%',
-    margin: '0 auto',
+    width: "100%",
+    margin: "0 auto",
     padding: theme.spacing(0, 2),
-    [theme.breakpoints.up('sm')]: {
-      padding: theme.spacing(0, 8),
+    [theme.breakpoints.up("sm")]: {
+      padding: theme.spacing(1, 8),
     },
   },
   logoContainer: {
-    width: 100,
-    height: 28,
-    [theme.breakpoints.up('md')]: {
-      width: 120,
-      height: 32,
+    width: 40,
+    height: 40,
+    [theme.breakpoints.up("md")]: {
+      width: 60,
+      height: 60,
+    },
+  },
+  logoText: {
+    padding: theme.spacing(0, 2),
+    "& a:hover": {
+      textDecoration: "none",
     },
   },
   logoImage: {
-    width: '100%',
-    height: '100%',
+    width: "100%",
+    height: "100%",
+  },
+  connectButton: {
+    marginLeft: "auto",
+    fontWeight: "bold",
   },
 }));
 
@@ -42,16 +53,27 @@ const Topbar = ({ themeMode, className, ...rest }: Props): JSX.Element => {
         <a href="/" title="Mona Tajabi">
           <Image
             className={classes.logoImage}
-            src={
-              themeMode === 'light'
-                ? 'https://assets.maccarianagency.com/the-front/logos/logo.svg'
-                : 'https://assets.maccarianagency.com/the-front/logos/logo-negative.svg'
-            }
+            src={logoSmall}
             alt="Mona Tajabi"
             lazy={false}
           />
         </a>
       </div>
+      <div className={classes.logoText}>
+        <Link href="/">
+          <Typography variant="h4" color="secondary">
+            Mona Tajarbi
+          </Typography>
+        </Link>
+      </div>
+      <Button
+        href="#connect"
+        variant="contained"
+        className={classes.connectButton}
+        color="primary"
+      >
+        Connect
+      </Button>
     </Toolbar>
   );
 };
