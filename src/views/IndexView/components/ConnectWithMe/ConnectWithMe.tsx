@@ -15,10 +15,14 @@ const useStyles = makeStyles(theme => ({
     fontWeight: 900,
   },
   sectionContainer: {
+    display: "flex",
+    justifyContent: "center",
     "& > div": {
       minWidth: "250px",
     },
-    marginBottom: theme.spacing(12),
+    [theme.breakpoints.up("sm")]: {
+      marginBottom: theme.spacing(8),
+    },
   },
 }));
 
